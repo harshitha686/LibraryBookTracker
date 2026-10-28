@@ -1,0 +1,20 @@
+{
+  "name": "library-book-tracker-backend",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Express REST API for the Library Book Tracker",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "dev": "node --watch server.js",
+    "check": "node --check server.js && node --check supabase.js && node --check middleware/admin.js && node --check routes/books.js && node --check routes/loans.js && node --check routes/dashboard.js"
+  },
+  "engines": { "node": ">=20" },
+  "dependencies": {
+    "@supabase/supabase-js": "^2.57.0",
+    "dotenv": "^16.6.1",
+    "express": "^5.1.0",
+    "express-rate-limit": "^8.1.0",
+    "helmet": "^8.1.0"
+  }
+}
